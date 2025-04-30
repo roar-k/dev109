@@ -4,10 +4,21 @@
   text-align: center;
 }
 
+h1 {
+  font-family: 'IndieFlowerRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   width: 90%;
   margin: 0 auto;
+  background-image: url("https://clipart-library.com/img/1967495.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 #content {
   overflow: auto;
@@ -15,6 +26,14 @@ body {
 
 #nav, #feature, #footer {
   margin: 1%;
+}
+
+#feature {
+  background-color: mistyrose;
+  background-image: url("https://www.freepnglogos.com/uploads/flower-png/blossom-flower-transparent-image-13.png");
+  background-size:contain;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .column1, .column2, .column3 {
@@ -27,18 +46,34 @@ body {
   margin-right: 0%;
 }
 
+.column1 {
+  background-color: lightpink;
+}
+
+.column2 {
+  background-color: lightsalmon;
+} 
+
+.column3 {
+  background-color: lightyellow;
+}
+
 li {
   display: inline;
   padding: 0.5em;
 }
 
-#nav, #footer {
-  background-color: #efefef;
+#nav {
+  background-color: lavender;
+  padding: 0.5em 0;
+}
+
+#footer {
+  background-color: lightcoral;
   padding: 0.5em 0;
 }
 
 #feature, .article {
   height: 10em;
   margin-bottom: 1em;
-  background-color: #efefef;
 }
