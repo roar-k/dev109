@@ -9,12 +9,12 @@ var table = parseInt(prompt("Enter a from 0 to 10: "));
 if (table == NaN || table == null) {
   table = 0;
 }
-                            
+
   // Do multiplication
-  while (i < 11) {
-    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+while (i < 11) {
+  msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
     i++;
-  }
+}
 
 // Write the message into the page
 var el = document.getElementById('blackboard');
