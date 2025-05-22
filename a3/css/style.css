@@ -1,4 +1,8 @@
 #rhombusContainer {
   display: grid;
-  grid-template-columns: auto auto;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
 }
