@@ -1,5 +1,11 @@
 // Creates a rhombus in 4 sections based on the user's choices on 4 inputs
 function createRhombus(height, colorEven, colorOdd, symbol) {
+  // Clears previous rhombus parts
+  document.getElementById("upLeft").innerHTML = "";
+  document.getElementById("upRight").innerHTML = "";
+  document.getElementById("downLeft").innerHTML = "";
+  document.getElementById("downRight").innerHTML = "";
+  
   upLeft(height, colorEven, colorOdd, symbol);
   upRight(height, colorEven, colorOdd, symbol);
   downLeft(height, colorEven, colorOdd, symbol);
