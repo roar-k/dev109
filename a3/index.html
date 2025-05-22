@@ -1,50 +1,62 @@
-	
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta name="description" content="Week 6 - BC - Rhombus">
-<meta charset="utf-8">
-<title>M07 - Rhombus</title>
-</head>
-<body>
-<label>What is the size of Rhombus?</label><br>
-<input type="text" id="rHeight" value="5" size="5">
-<br>
-<label>Choose color for Even position</label><br>
-<select id="colorEven">
-<option value="#0000FF">Blue</option>
-<option value="#FF0000">Red</option>
-<option value="#FF9900">Orange</option>
-</select><br>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description content="Week 6 - BC - Rhombus">
+    <title>M07 - Rhombus</title>
+  </head>
+  <body>
 
-<label>Choose color for Odd position</label><br>
-<select id="colorOdd">
-<option value="#FF0099">Pink</option>
-<option value="#33FF00">Green</option>
-<option value="#660099">Purple</option>
-</select>
-<br>
-<label>Choose symbol for Rhombus</label>
-<select id="symbol">
-<option value="*">*</option>
-<option value="$">$</option>
-<option value="@">@</option>
-</select>
-<br>
-<button onclick="createRhombus(document.getElementById('rHeight').value,
-document.getElementById('colorEven').value,
-document.getElementById('colorOdd').value,
-document.getElementById('symbol').value);">Display Rhombus</button>
-<div id="upLeft">Rhombus</div>
-<div id="upRight"></div>
-<div id="downLeft"></div>
-<div id="downRight"></div>
+    <header>
+      <h1>Rhombus Creator</h1>
+      <p>Created by Ben</p>
+    </header>
 
-<!-- CALL YOUR JAVASCRIPT FILE IF YOU ARE USING A HOSTING ENVIRONMENT
+    <!-- Allows the user to choose the height of the rhombus -->
+    <label>What is the size of the Rhombus?</label><br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br>
 
-<script src=""></script>
+    <!-- Allows the user to select from 3 options for the even color used to make the Rhombus -->
+    <label>Choose a color for the Even position</label><br>
+    <select id="colorEven">
+      <option value="#060270">Indigo</option>
+      <option value="#CC6CE7">Purple</option>
+      <option value="#CC6CE7">Green</option>
+    </select><br>
 
--->
+    <!-- Allows the user to select from 3 options for the odd color used to make the Rhombus -->
+    <label>Choose a color for the Odd position</label><br>
+    <select id="colorOdd">
+      <option value="#EFC3CA">Rose</option>
+      <option value="#E7DDFF">Lavender</option>
+      <option value="#DFC57B">Gold</option>
+    </select><br>
 
-</body>
+    <!-- Allows the user to select from 3 options for the symbols used to make the Rhombus -->
+    <label>Choose a symbol for the Rhombus</label>
+    <select id="symbol">
+      <option value="*">*</option>
+      <option value="%">%</option>
+      <option value="=">=</option>
+    </select><br>
+
+    <!-- Button that draws rhombus when clicked -->
+    <button onclick="createRhombus(
+      document.getElementById('rHeight').value,
+      document.getElementById('colorEven').value,
+      document.getElementById('colorOdd').value,
+      document.getElementById('symbol').value)">Display Rhombus</button>
+
+    <!-- Display the 4 parts of the rhombus-->
+    <div id="upLeft"></div>
+    <div id="upRight"></div>
+    <div id="downLeft"></div>
+    <div id="downRight"></div>
+
+    <!-- Javascript file that creates the rhombus-->
+    <script src="js/createRhombus.js"</script>
+
+  </body>
 </html>
