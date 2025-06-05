@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("FirstName").addEventListener('blur', firstName, false);
     document.getElementById("LastName").addEventListener('blur', lastName, false);
+    document.getElementById("Email").addEventListener('blur', email, false);
     
 });
 
@@ -11,7 +12,7 @@ function isValid(event) {
     // Validate all fields
     if (firstName() &&
         lastName() &&
-        // email() &&
+        email() &&
         // phone() &&
         // username() &&
         // password() &&
@@ -33,7 +34,7 @@ function isValid(event) {
 
 function firstName(){
     //1) Create variable
-    var validFirstname=false;
+    var validFirstname = false;
 
     //2) Read value from HTML
     var firstname = document.getElementById("FirstName").value;
@@ -90,7 +91,30 @@ function lastName() {
     document.getElementById("lname").innerHTML = errorMessages;
 
     //5) Return status of each field
-    return (validLastname);
+    return validLastname;
+}
+
+function email() {
+    var validEmail = false;
+    var userEmail = document.getElementById("Email").value;
+    var errorMessages = "";
+    
+    var atpos = userEmail.indexOf("@");
+    var dotpos = userEmail.lastIndexOf(".");
+    
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= userEmail.length) {
+        errorMessages += "<p>Invalid email</p>";
+        console.log("Email invalid");
+    }
+            
+    else {
+        validEmail = true;
+        console.log("Email valid");
+    }
+
+    document.getElementById("emailerror").innerHTML = errorMessages;
+
+    return validEmail;
 }
 
     
