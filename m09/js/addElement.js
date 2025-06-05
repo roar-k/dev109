@@ -14,7 +14,7 @@ function addItem() {
       var newEl = document.createElement('li');
 
       // Create a text node and store it in a variable.
-      var newText = document.createTextNode('value');
+      var newText = document.createTextNode(value);
 
       // Attach the new text node to the new element.
       newEl.appendChild(newText);
