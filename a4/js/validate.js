@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("City").addEventListener('blur', city, false);
     document.getElementById("State").addEventListener('blur', state, false);
     document.getElementById("Country").addEventListener('blur', country, false);
+    document.getElementById("ZipCode").addEventListener('blur', zipCode, false);
 
     document.getElementById("myform").addEventListener("submit", function(event) {
         if (!isValid(event)) {
@@ -33,7 +34,7 @@ function isValid(event) {
         city() &&
         state() &&
         country() &&
-        // zipCode()
+        zipCode()
     ) {
         return true;
     }
@@ -325,6 +326,32 @@ function country() {
 
     //5) Return status of each field
     return validCountry;
+}
+
+function zipCode() {
+    //1) Create variable
+    var validZipCode = false;
+
+    //2) Read value from HTML
+    var zipCode = document.getElementById("ZipCode").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (zipCode === "" || zipCode > 5) {
+        errorMessages += "<p>The zip code is required and cannot be greater than 5 characters</p>";
+        console.log("Zip code invalid — empty");
+    }
+
+    else {
+        validZipCode = true;
+        console.log("Zip code valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("zipCodeError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validZipCode;
 }
 
     
