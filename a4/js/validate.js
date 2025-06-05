@@ -91,5 +91,6 @@ function lastName() {
 
     //5) Return status of each field
     return (validLastname);
+}
 
     
