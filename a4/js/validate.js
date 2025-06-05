@@ -38,13 +38,13 @@ function firstName(){
     var errorMessages = "";
 
     //3) Do validation
-    if (firstname === "" || firstname === "" || firstname.length > 20 ) {
+    if (firstname === "" || firstname.length > 20 ) {
         errorMessages += "<p>The first name is required and cannot be greater than 20 characters</p>";
         console.log("First name invalid — length")
     }
         
-    else if (!firstname.match("^[a-zA-Z ,.'-]+$")) {
-        errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+    else if (!firstname.match(/^[a-zA-Z ,.'-]+$/)) {
+        errorMessages += "<p>Invalid character in first name (accepts only A-Z, a-z, and ,.'-)</p>";
         console.log("First name invalid — bad characters");
     }
         
