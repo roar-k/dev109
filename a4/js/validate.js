@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("Phone").addEventListener('blur', phone, false);
     document.getElementById("Username").addEventListener('blur', username, false);
     document.getElementById("Password").addEventListener('blur', password, false);
+    document.getElementById("Address").addEventListener('blur', address, false);
+    document.getElementById("City").addEventListener('blur', city, false);
+
+    document.getElementById("myform").addEventListener("submit", function(event) {
+        if (!isValid(event)) {
+            event.preventDefault();
+        }
+    });
     
 });
 
@@ -19,8 +27,8 @@ function isValid(event) {
         phone() &&
         username() &&
         password() &&
-        // address() &&
-        // city() &&
+        address() &&
+        city()
         // state() &&
         // country() &&
         // zipCode()
@@ -30,7 +38,6 @@ function isValid(event) {
         
     else {
         document.getElementById("submitError").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
-        event.preventDefault();
         return false;
     }
 }
@@ -212,6 +219,58 @@ function password() {
 
     //5) Return status of each field
     return validPassword;
+}
+
+function address() {
+    //1) Create variable
+    var validAddress = false;
+
+    //2) Read value from HTML
+    var address = document.getElementById("Address").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (address === "") {
+        errorMessages += "<p>The address is required</p>";
+        console.log("Address invalid — empty");
+    }
+
+    else {
+        validAddress = true;
+        console.log("Address valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("addressError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validAddress;
+}
+
+function city() {
+    //1) Create variable
+    var validCity = false;
+
+    //2) Read value from HTML
+    var city = document.getElementById("City").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (city === "") {
+        errorMessages += "<p>The city is required</p>";
+        console.log("City invalid — empty");
+    }
+
+    else {
+        validCity = true;
+        console.log("City valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("cityError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validCity;
 }
 
 
