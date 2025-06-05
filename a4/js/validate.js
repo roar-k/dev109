@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("Password").addEventListener('blur', password, false);
     document.getElementById("Address").addEventListener('blur', address, false);
     document.getElementById("City").addEventListener('blur', city, false);
+    document.getElementById("State").addEventListener('blur', state, false);
 
     document.getElementById("myform").addEventListener("submit", function(event) {
         if (!isValid(event)) {
@@ -28,8 +29,8 @@ function isValid(event) {
         username() &&
         password() &&
         address() &&
-        city()
-        // state() &&
+        city() &&
+        state() &&
         // country() &&
         // zipCode()
     ) {
@@ -273,6 +274,30 @@ function city() {
     return validCity;
 }
 
+function state() {
+    //1) Create variable
+    var validState = false;
 
+    //2) Read value from HTML
+    var state = document.getElementById("State").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (state === "") {
+        errorMessages += "<p>The state is required</p>";
+        console.log("State invalid — empty");
+    }
+
+    else {
+        validState = true;
+        console.log("State valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("stateError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validState;
+}
 
     
