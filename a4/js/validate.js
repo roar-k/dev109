@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("Email").addEventListener('blur', email, false);
     document.getElementById("Phone").addEventListener('blur', phone, false);
     document.getElementById("Username").addEventListener('blur', username, false);
+    document.getElementById("Password").addEventListener('blur', password, false);
     
 });
 
@@ -17,7 +18,7 @@ function isValid(event) {
         email() &&
         phone() &&
         username() &&
-        // password() &&
+        password() &&
         // address() &&
         // city() &&
         // state() &&
@@ -185,6 +186,32 @@ function username() {
 
     //5) Return status of each field
     return validUsername;
+}
+
+function password() {
+    //1) Create variable
+    var validPassword = false;
+
+    //2) Read value from HTML
+    var password = document.getElementById("Password").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (password === "" || password.length > 7) {
+        errorMessages += "<p>The password is required and cannot be greater than 7 characters</p>";
+        console.log("Password invalid — length");
+    }
+
+    else {
+        validPassword = true;
+        console.log("Password valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("passwordError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validPassword;
 }
 
 
