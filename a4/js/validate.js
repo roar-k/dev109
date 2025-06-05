@@ -334,17 +334,25 @@ function zipCode() {
 
     //2) Read value from HTML
     var zipCode = document.getElementById("ZipCode").value;
+    var country = document.getElementById("Country").value;
     var errorMessages = "";
 
     //3) Do validation
-    if (zipCode === "" || zipCode > 5) {
-        errorMessages += "<p>The zip code is required and cannot be greater than 5 characters</p>";
-        console.log("Zip code invalid — empty");
+    if (country === "USA") {
+        if (zipCode === "" || zipCode.length > 5) {
+            errorMessages += "<p>The zip code is required and cannot be greater than 5 characters</p>";
+            console.log("Zip code invalid — empty");
+        }
+
+        else {
+            validZipCode = true;
+            console.log("Zip code valid");
+        }
     }
 
     else {
         validZipCode = true;
-        console.log("Zip code valid");
+        console.log("Zip code skipped");
     }
 
     //4) Send error message to HTML
