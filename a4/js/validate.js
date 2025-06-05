@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("Address").addEventListener('blur', address, false);
     document.getElementById("City").addEventListener('blur', city, false);
     document.getElementById("State").addEventListener('blur', state, false);
+    document.getElementById("Country").addEventListener('blur', country, false);
 
     document.getElementById("myform").addEventListener("submit", function(event) {
         if (!isValid(event)) {
@@ -31,7 +32,7 @@ function isValid(event) {
         address() &&
         city() &&
         state() &&
-        // country() &&
+        country() &&
         // zipCode()
     ) {
         return true;
@@ -298,6 +299,32 @@ function state() {
 
     //5) Return status of each field
     return validState;
+}
+
+function country() {
+    //1) Create variable
+    var validCountry = false;
+
+    //2) Read value from HTML
+    var country = document.getElementById("Country").value;
+    var errorMessages = "";
+
+    //3) Do validation
+    if (country === "") {
+        errorMessages += "<p>The country is required</p>";
+        console.log("Country invalid — empty");
+    }
+
+    else {
+        validCountry = true;
+        console.log("Country valid");
+    }
+
+    //4) Send error message to HTML
+    document.getElementById("countryError").innerHTML = errorMessages;
+
+    //5) Return status of each field
+    return validCountry;
 }
 
     
