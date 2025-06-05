@@ -37,6 +37,9 @@ function addItem() {
         message.textContent = "Entry was empty";
         break;
       }
+      
+      // EXTRA CREDIT: Clear the textbox after each item is added
+      input.value = "";
     }
     break;
   }
