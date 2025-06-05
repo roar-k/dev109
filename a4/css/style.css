@@ -1,3 +1,12 @@
 .warning {
-    color:red;
+    color: red;
+}
+
+form {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    border: 2px solid;
+    background-color: Azure;
+    margin: 20px;
+    padding: 20px;
 }
