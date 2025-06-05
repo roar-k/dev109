@@ -40,6 +40,10 @@ function addItem() {
       
       // EXTRA CREDIT: Clear the textbox after each item is added
       input.value = "";
+
+      // Clear the error message when an item is added
+      message.textContent = "";
+      
     }
     break;
   }
