@@ -13,3 +13,9 @@ form {
     margin: 20px auto;
     padding: 20px;
 }
+
+/* Center heading */
+h1 {
+    margin: 50px auto;
+    text-align: center;
+}
