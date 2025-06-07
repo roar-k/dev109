@@ -19,3 +19,12 @@ h1 {
     margin: 50px auto;
     text-align: center;
 }
+
+/* Aligns footer text to center */
+footer {
+    text-align: center;
+}
+
+img {
+    max-width: 60px;
+}
