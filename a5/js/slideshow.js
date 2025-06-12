@@ -1,7 +1,7 @@
 var myImages =["https://i.pinimg.com/originals/bf/44/fa/bf44fa8743e026c7d3955dd28a4d32fa.jpg", 
 							 "https://wallup.net/wp-content/uploads/2015/12/124083-skyscraper-New_York_City-city-landscape.jpg", 
 							 "https://wallpaperaccess.com/full/33929.jpg", 
-							 "https://th.bing.com/th/id/OIP.ZRQLcRGiP0kn5iXqv1FZVgHaEo?rs=1&pid=ImgDetMain", 
+							 "https://eskipaper.com/images/eiffel-tower-sunset-1.jpg", 
 							 "https://jakadatoursegypt.com/wp-content/uploads/2022/07/Khafre-pyramid.jpg"];
 
 var captionImages =["Beautiful scenery of Japan with Mount Fuji in the background and Sakura Trees in the front", 
