@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="description" content="Artifact 04 - Contact Us">
+        <meta name="description" content="Artifact 05 - Carousel">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>A5 - Carousel</title>
     </head>
     
     <body>
+
+        <!-- Countdown timer -->
+        <div id="timer">Countdown: <span id="countdown">4</span>s</div>
+
+        <h1>Slideshow</h1>
+
+        <!-- Checkbox for if the user wants the slides to run automatically -->
+        <input id="auto" type="checkbox">Run automatically
+        
+        <br><br>
+
+        <!-- Set height and width of image with descriptive alt text -->
+        <img id="slideshow" src="https://i.pinimg.com/originals/bf/44/fa/bf44fa8743e026c7d3955dd28a4d32fa.jpg" width="200" height="200" alt="Beautiful scenery of Japan with Mount Fuji and Sakura Trees">
+        
+        <!-- Description of image -->
+        <p id="caption">Beautiful scenery of Japan with Mount Fuji in the background and Sakura Trees in the front</p> 
+
+        <!-- Previous and next buttons -->
+        <button id="previous">PREVIOUS</button>
+        <button id="next">NEXT</button>
 
       <script src="slideshow.js"></script>
       
