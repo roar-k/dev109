@@ -61,6 +61,7 @@ nextButton.addEventListener("click", () => {
  }
 });
 
+// When countdown reaches 0 (4 seconds), next slide is automatically shown if "Run automatically" is checked
 function autoSlide() {
 if (document.getElementById("auto").checked) {
  countdown--;
