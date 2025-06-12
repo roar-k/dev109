@@ -3,7 +3,13 @@ body {
   text-align: center;
 }
 
+.slideshow-container {
+  max-width: 500px;
+  align-items: center;
+  margin: 0 auto;
+}
+
 img#slideshow {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
