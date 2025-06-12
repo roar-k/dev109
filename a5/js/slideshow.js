@@ -6,7 +6,7 @@ var myImages =["https://i.pinimg.com/originals/bf/44/fa/bf44fa8743e026c7d3955dd2
 
 var captionImages =["Beautiful scenery of Japan with Mount Fuji in the background and Sakura Trees in the front", 
 										"Beatiful scenery of New York City at night with the city buildings reflecting in the water", 
-										"Beautiful scenery of the Great Wall of China under the sunset", 
+										"Beautiful scenery of the Great Wall of China under the sunset with huge mountains in the background", 
 										"Beautiful scenery of the Eiffel Tower in Paris with the sunset in the background", 
 										"Beautiful scenery of Egypt with the Pyramid of Giza in the background under the bright sun"];
 
@@ -47,18 +47,18 @@ var previousButton = document.getElementById("previous");
 
 // Moves to previous slide when previous button is clicked and resets timer if auto slide is on
 previousButton.addEventListener("click", () => {
- back();
  if (document.getElementById("auto").checked) {
      resetTimer();
  }
+	back();
 });
 
 // Moves to next slide when next button is clicked and resets timer if auto slide is on
 nextButton.addEventListener("click", () => {
- next();
  if (document.getElementById("auto").checked) {
      resetTimer();
  }
+	next();
 });
 
 // When countdown reaches 0 (4 seconds), next slide is automatically shown if "Run automatically" is checked
