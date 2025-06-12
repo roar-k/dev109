@@ -1,1 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
+img#slideshow {
+  width: 400px;
+  height: 400px;
+}
