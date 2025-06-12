@@ -3,15 +3,19 @@ body {
   text-align: center;
 }
 
+#timer {
+  text-align: left;
+}
+
 .slideshow-container {
-  max-width: 500px;
+  max-width: 700px;
   align-items: center;
   margin: 0 auto;
 }
 
 img#slideshow {
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 600px;;
 }
 
 footer {
