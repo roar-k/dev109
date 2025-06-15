@@ -5,20 +5,27 @@ body {
   text-align: center;
 }
 
+/* Center image */
 img {
   display: block;
   margin: 0 auto;
 }
 
+/* Different font for h1 */
 h1 {
   font-family: 'JelleeBold';
   font-weight: normal;
   font-style: normal;
 }
 
+/* Different font for h3 */
 h3 {
   font-family: 'NowRegular';
   font-weight: normal;
   font-style: normal;
 }
 
+/* Get rids of bullet points in the list */
+ul {
+  list-style: none;
+}
