@@ -38,4 +38,7 @@ ul {
   background-color: white;
   border: 2px solid;
   text-align: left-align;
+  column-count: 3;
+  column-gap: 20px;
+  overflow: auto;
 }
