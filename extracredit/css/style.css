@@ -1,1 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background: SkyBlue;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'JelleeBold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3 {
+  font-family: 'NowRegular';
+  font-weight: normal;
+  font-style: normal;
+}
 
