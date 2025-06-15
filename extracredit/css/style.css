@@ -25,20 +25,29 @@ h3 {
   font-style: normal;
 }
 
-/* Removes the bullet points from the list of items */
-ul {
-  list-style: none;
-}
-
 /* Styling of the container containing all the items */
 .container {
-  width: 600px;
+  width: 300px;
   height: 200px;
   margin: 20px auto;
   background-color: white;
   border: 2px solid;
-  text-align: left-align;
-  column-count: 3;
-  column-gap: 20px;
+  
+  /* Centers the text in the container*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   overflow: auto;
+}
+
+.container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 3;
+}
+
+.container ul li {
+  text-align: center;
 }
