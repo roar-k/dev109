@@ -32,7 +32,7 @@ itemList.forEach(id => {
 
 // Crosses out the item from the list if found
 function foundItem(id) {
-  document.getElementById(id).style.TextDecoration="line-through";
+  document.getElementById(id).style.textDecoration="line-through";
 
   // Increases the found count by 1
   found++;
