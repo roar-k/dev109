@@ -25,9 +25,15 @@ h3 {
   font-style: normal;
 }
 
+/* Removes the bullet points from the list of items */
+ul {
+  list-style: none;
+}
+
 /* Styling of the container containing all the items */
 .container {
-  width: 200px;
+  width: 600px;
+  height: 200px;
   margin: 20px auto;
   background-color: white;
   border: 2px solid;
