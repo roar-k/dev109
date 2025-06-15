@@ -29,3 +29,13 @@ h3 {
 ul {
   list-style: none;
 }
+
+/* Styling of the container containing all the items */
+.container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: Gray;
+  border: 2px solid;
+  text-align: center;
+}
